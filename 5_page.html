@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CH5</title>
+	<link rel="stylesheet" type="text/css" href="full-page-scroll.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400" rel="stylesheet">
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+
+		section div {
+			font-family: 'Open Sans';
+			font-style: normal;
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		span {
+			font-size: 4em;
+			font-style: normal;
+			color: #fff;
+		}
+
+		#btn {
+			margin-top: 20px;
+			border: 1px solid skyblue;
+			background-color: rgba(0, 0, 0, 0);
+			color: skyblue;
+			padding: 5px;
+			border-radius: 5px;
+		}
+
+		#btn:hover {
+			color: white;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="main" class="scroll-container">
+		<section class="section1">
+			<div>
+				<span>Ch.5 <br><br> 사랑해야할 것들은 저 멀리 있지 않고 <br> 내 눈 앞에 있다.</span>
+			</div>
+		</section>
+		<section class="section2">
+			<!--비디오태그-->
+			<video controls="" autoplay="" name="media" style="position: relative;max-width:86%;height:auto; left:7%;">
+				<source src="content/video5.mp4" type="video/mp4"></video>
+
+		</section>
+		<section class="section3">
+			<div class="text" style="top:50%; ">
+				<button id="btn" onclick="location.href='6_page.html'">마지막 이야기</button>
+			</div>
+		</section>
+	</div>
+
+	<script src="full-page-scroll.js"></script>
+	<script type="text/javascript">
+		new fullScroll({
+			displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 0.7,
+			animateFunction: 'ease'
+		});
+	</script>
+	<script>
+		var elem = document.getElementById("mainvideo");
+
+		function openFullscreen() {
+			if (elem.requestFullscreen) {
+				elem.requestFullscreen();
+			} else if (elem.mozRequestFullScreen) {
+				elem.mozRequestFullScreen();
+			} else if (elem.webkitRequestFullscreen) {
+				elem.webkitRequestFullscreen();
+			} else if (elem.msRequestFullscreen) {
+				elem.msRequestFullscreen();
+			}
+		}
+	</script>
+
+	<script type="text/javascript">
+		document.getElementById('mainvideo').addEventListener('ended', function() {
+			alert('마지막 이야기');
+			document.location.href = '6_page.html';
+		});
+	</script>
+</body>
+
+</html>

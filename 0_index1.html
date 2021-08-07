@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Dokodak Stroy</title>
+	<link rel="stylesheet" type="text/css" href="full-page-scroll.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body {
+			background-color: black;
+		}
+
+		div .section1,
+		{
+			background-color: black;
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		section div {
+			font-family: 'Open Sans';
+			font-style: normal;
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		span {
+			font-size: 4em;
+			font-style: normal;
+			color: #fff;
+		}
+
+		h1 {
+			font-family: 'Ubuntu', sans-serif;
+			margin-left: 50px;
+			margin-top: 50px;
+			color: #fff;
+			position: fixed;
+		}
+
+		audio {
+			padding: 10% 40% 10% 40%;
+		}
+	</style>
+</head>
+
+<body>
+	<h1> LOVE MATTERS </h1>
+	<div id="main" class="scroll-container">
+		<section class="section1">
+			<div>
+				<span>Intro. <br><br> 어느 날, 편지 한 통을 받았다. </span>
+			</div>
+		</section>
+		<section class="section2">
+			<div>
+				<a href="0_index2.html" target="_blank"><img src="content/main.jpg" alt=""></a>
+			</div>
+			<audio src="content/music.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+		</section>
+	</div>
+
+	<script src="full-page-scroll.js"></script>
+	<script type="text/javascript">
+		new fullScroll({
+			displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 0.7,
+			animateFunction: 'ease'
+		});
+	</script>
+
+</body>
+
+</html>
